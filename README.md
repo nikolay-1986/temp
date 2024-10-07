@@ -7,3 +7,4 @@ any commit message JD_8
 TST-2 testing JD_10
 TST-1 time smartcommit checking #time 30m
 TST-1 time smartcommit checking #time 1h
+TST-1 time smartcommit checking #time 1h 30m
