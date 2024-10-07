@@ -14,3 +14,4 @@ TST-1 fixversion smartcommit checking #fixversion 5.0.0
 TST-1 affect version smartcommit checking #affectsversion 4.28.2
 TST-1 label smartcommit checking #label regression
 TST-1 Max commit age checking #label max age - 1min
+TST-1 Max commit age checking #time 2horse_
