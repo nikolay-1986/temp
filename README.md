@@ -12,3 +12,4 @@ TST-1 transition smartcommit checking #in-progress
 TST-1 assigne smartcommit checking #assign admin
 TST-1 fixversion smartcommit checking #fixversion 5.0.0
 TST-1 affect version smartcommit checking #affectsversion 4.28.2
+TST-1 label smartcommit checking #label regression
