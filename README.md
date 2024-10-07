@@ -10,3 +10,4 @@ TST-1 time smartcommit checking #time 1h
 TST-1 time smartcommit checking #time 1h 30m
 TST-1 transition smartcommit checking #in-progress 
 TST-1 assigne smartcommit checking #assign admin
+TST-1 fixversion smartcommit checkin #fixversion 5.0.0
