@@ -17,3 +17,4 @@ TST-1 Max commit age checking #label max age - 1min
 TST-1 Max commit age checking #time 2horse_
 TST-1 double time smartcommit checking #time 1h
 TST-1 comment smartcommit checking #comment comment smartcommit checking
+TST-2 testing JD_126
