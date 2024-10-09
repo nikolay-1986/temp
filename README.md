@@ -20,3 +20,4 @@ TST-1 comment smartcommit checking #comment comment smartcommit checking
 TST-2 testing JD_126
 TST-2 testing JD_126_2
 TST-2 testing JD_126_3
+TST-2 testing JD_126_4
