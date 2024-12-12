@@ -49,3 +49,4 @@ NEXT-1-testing_GIT_6168_2
 testing_GIT_6168_commits wo issuekey
 testing_GIT_6168_commits wo issuekey
 testing_GIT_6168_commits wo issuekey
+testing_GIT_6168_commits wo issuekey
