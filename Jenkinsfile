@@ -1,4 +1,4 @@
-pipeline {
+	pipeline {
    agent { 
 		docker { 
 			image 'mcr.microsoft.com/playwright:v1.49.1-noble' 
@@ -27,7 +27,7 @@ pipeline {
    }
    post {
         always {
-	    node ('docker') {
+	    node ('any') {
             	   archiveArtifacts artifacts: '**/test-results/**', allowEmptyArchive: true
         	   junit '**/test-results/*.xml'
 		}
