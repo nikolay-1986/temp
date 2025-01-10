@@ -27,7 +27,7 @@ pipeline {
    }
    post {
         always {
-	    node {
+	    node ('docker') {
             	   archiveArtifacts artifacts: '**/test-results/**', allowEmptyArchive: true
         	   junit '**/test-results/*.xml'
 		}
