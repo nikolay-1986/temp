@@ -27,7 +27,7 @@
    }
    post {
         always {
-	    node ('any') {
+	    node (any) {
             	   archiveArtifacts artifacts: '**/test-results/**', allowEmptyArchive: true
         	   junit '**/test-results/*.xml'
 		}
