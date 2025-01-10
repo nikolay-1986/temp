@@ -1,0 +1,14 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "description": "TST-1 Commit for checking of indexing for 1,3,4 nodes wo 2 \r TST-1 Commit for checking of new end point\r TST-1 testing 3rd fix for GIT_6056\r any commit message JD_8\r TST-2 testing JD_10\r TST-1 time smartcommit checking #time 30m\r TST-1 time smartcommit checking #time 1h\r TST-1 time smartcommit checking #time 1h 30m\r TST-1 transition smartcommit checking #in-progress \r TST-1 assigne smartcommit checking #assign admin\r TST-1 fixversion smartcommit checking #fixversion 5.0.0\r TST-1 affect version smartcommit checking #affectsversion 4.28.2\r TST-1 label smartcommit checking #label regression\r TST-1 Max commit age checking #label max age - 1min\r TST-1 Max commit age checking #time 2horse_\r TST-1 double time smartcommit checking #time 1h\r TST-1 comment smartcommit checking #comment comment smartcommit checking\r TST-2 testing JD_126\r TST-2 testing JD_126_2\r TST-2 testing JD_126_3\r TST-2 testing JD_126_4\r TST-2 testing JD_126_5\r TST-2 testing JD_126_6\r TST-2 testing JD_126_7\r TST-2 testing JD_126_8\r TST-2 testing JD_126_9\r TST-2 testing JD_126_10\r TST-2 testing JD_126_11\r TST-2 testing JD_126_12\r TST-3 testing JD_129_13\r TST-3 testing JD_129_14\r TST-3 testing JD_129_15\r TST-3 testing JD_129_16\r TST-3 testing JD_129_17\r TST-3 testing JD_129_18\r TST-3 testing JD_129_19\r TST-3 testing JD_133_20\r TST-3 testing JD_133_21\r TST-3 testing JD_133_22\r TST-3 testing JD_134_23\r TST-3 testing JD_135_24\r TST-3 testing GIT_6089\r TST-1 testing GIT_6108\r TST-1 testing GIT_6108_2\r NEXT-1-testing_GIT_6168\r NEXT-1-testing_GIT_6168_2\r testing_GIT_6168_commits wo issuekey\r testing_GIT_6168_commits wo issuekey\r testing_GIT_6168_commits wo issuekey\r testing_GIT_6168_commits wo issuekey\r new branch commit\r GIT_6158_6159_webhooks\r GIT_6158_6159_webhooks_1\r GIT_6158_6159_webhooks_2\r GIT_6158_6159_webhooks_3\r GIT_6158_6159_webhooks_4\r GIT_6158_6159_webhooks_5\r GIT_6158_6159_webhooks_6\r GIT_6158_6159_webhooks_7\r GIT_6158_6159_webhooks_8\r GIT_6158_6159_webhooks_9\r GIT_6158_6159_webhooks_10\r GIT_6158_6159_webhooks_11\r GIT_6250_indexing via webhooks",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5"
+  }
+}
