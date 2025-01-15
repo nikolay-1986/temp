@@ -1,90 +1,35 @@
 pipeline {
-   agent { 
-		docker { 
-			image 'mcr.microsoft.com/playwright:v1.49.1-noble' 
-			args '-u root'
-		} 
-	}
-   environment {
-        //CI = 'true' // Помечает запуск как CI
-		DOCKER_HOST = 'unix:///var/run/docker.sock' // Указываем путь к Docker сокету
+    agent {
+        docker {
+            image 'jenkins-playwright:latest' // Используй созданный образ
+            args '--shm-size=2g' // Увеличиваем объем памяти для браузеров
+        }
     }
-	stages {
-        stage('Prepare Environment') {
+    environment {
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = 1 // Пропуск повторной загрузки браузеров
+    }
+    stages {
+        stage('Install Dependencies') {
             steps {
-                script {
-                    sh '''
-                    # Убедимся, что Docker установлен
-                    docker -v || apt-get update && apt-get install -y docker.io
-
-                    # Запустим Docker, если он не активен
-                    if ! systemctl is-active --quiet docker; then
-                        systemctl start docker
-                    fi
-                    '''
-                }
+                sh 'npm install'
             }
         }
-        stage('Run Playwright Docker Container') {
+        stage('Run Playwright Tests') {
             steps {
-                script {
-                    sh '''
-                    # Запуск Playwright контейнера
-                    docker run --rm \
-                        -v $PWD:/workdir \
-                        -w /workdir \
-                        --ipc=host \
-                        mcr.microsoft.com/playwright:latest \
-                        bash -c "npx playwright install && npx playwright test"
-                    '''
-                }
+                sh 'npx playwright test'
             }
         }
     }
     post {
         always {
-            echo 'Pipeline завершен.'
+            archiveArtifacts artifacts: '**/test-results/**/*.*', allowEmptyArchive: true
+            publishHTML(target: [
+                allowMissing: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report'
+            ])
         }
     }
-	
-	
- //  stages {   
-//	  stage('Install dependencies') {
- //           steps {
-  //              script {
-//					sh '''
-//					# Check that Node.js is installed
- //                   node -v || apt-get update && apt-get install -y nodejs npm
- //                   npm install --global npm@latest
-//					# Install Playwright
-//					npm install -D playwright
-//                    npx playwright install
-//                    # Set dependencies
-//                    sh 'npm ci'
-//					'''
-//                }
-//            }
-//        }
-//      stage('Run e2e tests') {
-//            steps {
-//                script {
-//					sh '''
-//                    # Запустить тесты
-//                    sh 'npx playwright test'
-//					'''
-//                }
-//            }
-//        }
-//   }
-//   post {
-//        always {
-//	    node (docker) {
-//            	   archiveArtifacts artifacts: '**/test-results/**', allowEmptyArchive: true
-//        	   junit '**/test-results/*.xml'
-//		}
-//        }
- //       failure {
- //           echo 'Tests failed!'
- //       }
- //   }
 }
